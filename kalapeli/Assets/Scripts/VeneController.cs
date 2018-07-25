@@ -8,16 +8,31 @@ public class VeneController : MonoBehaviour {
     public GameObject joystick;
     public GameObject setAnchorButton;
     public GameObject releaseAnchorButton;
+    public GameObject spinningWheel;
 
     // Use this for initialization
     void Start () {
-        SetAnchored(false);
-	}
+        StartMode();
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    public void StartMode()
+    {
+        joystick.SetActive(true);
+        setAnchorButton.SetActive(true);
+        releaseAnchorButton.SetActive(false);
+        spinningWheel.SetActive(false);
+    }
+
+    public void SetSpinningWheel(bool showWheel)
+    {
+        releaseAnchorButton.SetActive(!showWheel);
+        spinningWheel.SetActive(showWheel);
+    }
 
     public void SetAnchored (bool anchored)
     {

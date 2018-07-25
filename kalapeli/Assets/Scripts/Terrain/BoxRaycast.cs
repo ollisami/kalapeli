@@ -24,27 +24,31 @@ public class BoxRaycast : MonoBehaviour
         int layerMask = 1 << 8;
 
         RaycastHit hit;
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, 0.6F, layerMask))
+        if (!Physics.Raycast(pos, transform.TransformDirection(Vector3.up), out hit, 0.6F, layerMask))
         {
             CubeTop(-0.5F, 0.5F, -0.5F);
+            if (pos.y < -2 && Random.value > 0.99F)
+            {
+                GameObject.FindObjectOfType<KalaController>().SpawnKala(pos);
+            }
         }
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(-Vector3.up), out hit, 0.6F, layerMask))
+        if (!Physics.Raycast(pos, transform.TransformDirection(-Vector3.up), out hit, 0.6F, layerMask))
         {
             CubeBot(-0.5F, 0.5F, -0.5F);
         }
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 0.6F, layerMask))
+        if (!Physics.Raycast(pos, transform.TransformDirection(Vector3.forward), out hit, 0.6F, layerMask))
         {
             CubeNorth(-0.5F, 0.5F, -0.5F);
         }
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(-Vector3.forward), out hit, 0.6F, layerMask))
+        if (!Physics.Raycast(pos, transform.TransformDirection(-Vector3.forward), out hit, 0.6F, layerMask))
         {
             CubeSouth(-0.5F, 0.5F, -0.5F);
         }
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, 0.6F, layerMask))
+        if (!Physics.Raycast(pos, transform.TransformDirection(Vector3.left), out hit, 0.6F, layerMask))
         {
             CubeWest(-0.5F, 0.5F, -0.5F);
         }
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(-Vector3.left), out hit, 0.6F, layerMask))
+        if (!Physics.Raycast(pos, transform.TransformDirection(-Vector3.left), out hit, 0.6F, layerMask))
         {
             CubeEast(-0.5F, 0.5F, -0.5F);
         }
