@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Vesi
   - Pohja
+  - Kala
+  - Viehe
   layers:
   - Default
   - TransparentFX

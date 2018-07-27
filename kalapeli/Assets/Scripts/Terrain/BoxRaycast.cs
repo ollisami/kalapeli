@@ -27,7 +27,7 @@ public class BoxRaycast : MonoBehaviour
         if (!Physics.Raycast(pos, transform.TransformDirection(Vector3.up), out hit, 0.6F, layerMask))
         {
             CubeTop(-0.5F, 0.5F, -0.5F);
-            if (pos.y < -2 && Random.value > 0.99F)
+            if (pos.y < -3 && Random.value > 0.99F)
             {
                 GameObject.FindObjectOfType<KalaController>().SpawnKala(pos);
             }

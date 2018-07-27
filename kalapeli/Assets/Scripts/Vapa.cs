@@ -67,9 +67,12 @@ public class Vapa : MonoBehaviour {
         {
             Rigidbody vieheRb = viehe.GetComponent<Rigidbody>();
             vieheRb.isKinematic = false;
-            vieheRb.AddForce(aimer.up * (2.0F * speed), ForceMode.Impulse);
-            vieheRb.AddForce(aimer.forward * (5.0F * speed), ForceMode.Impulse);
-            viehe.GetComponent<SpringJoint>().connectedBody = GetComponent<Rigidbody>();
+            Vector3 upforce = aimer.up * (1.5F * speed);
+            upforce = new Vector3(Mathf.Min(upforce.x, 1.5F), Mathf.Min(upforce.y, 1.5F), Mathf.Min(upforce.z, 1.5F));
+            Vector3 fwdforce = aimer.forward * (5.0F * speed);
+            fwdforce = new Vector3(Mathf.Min(fwdforce.x, 3), Mathf.Min(fwdforce.y, 3), Mathf.Min(fwdforce.z, 3));
+            vieheRb.AddForce(upforce, ForceMode.Impulse);
+            vieheRb.AddForce(fwdforce, ForceMode.Impulse);
             ShowSpinningWheel(true);
         }
     }

@@ -20,14 +20,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4331278921794104}
   - component: {fileID: 33060108969172928}
-  - component: {fileID: 65172398326303834}
   - component: {fileID: 23610351111510724}
   - component: {fileID: 54173261397625958}
   - component: {fileID: 114992950848261350}
-  - component: {fileID: 145427451556797580}
+  - component: {fileID: 135190824895958698}
   m_Layer: 9
   m_Name: viehe_perus
-  m_TagString: Untagged
+  m_TagString: Viehe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,18 +174,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65172398326303834
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1248700635313184}
-  m_Material: {fileID: 13400000, guid: a9f202712079f484f9103498b8f5ed35, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114992950848261350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,25 +186,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vapa: {fileID: 0}
---- !u!145 &145427451556797580
-SpringJoint:
+  kala: {fileID: 0}
+--- !u!135 &135190824895958698
+SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1248700635313184}
-  m_ConnectedBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0.5, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Spring: 0
-  m_Damper: 0.2
-  m_MinDistance: 0
-  m_MaxDistance: 0
-  m_Tolerance: 0.025
-  m_BreakForce: 10
-  m_BreakTorque: 10
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}

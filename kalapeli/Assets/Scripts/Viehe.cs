@@ -7,6 +7,7 @@ public class Viehe : MonoBehaviour {
     public Vapa vapa;
     private Rigidbody rb;
     private bool hasTouchedWater = false;
+    public Kala kala;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,11 @@ public class Viehe : MonoBehaviour {
             {
                 if(hasTouchedWater && Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(vapa.transform.position.x, vapa.transform.position.z)) < 4)
                 {
+                    if(kala != null)
+                    {
+                        Debug.Log("Hyvä homma hermanni! " + kala.laji + " " + kala.weight);
+                        Destroy(kala.gameObject);
+                    }
                     vapa.ShowSpinningWheel(false);
                 }
             }
@@ -42,23 +48,9 @@ public class Viehe : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag.Equals("Kala"))
-        {
-            Debug.Log("Kala tuli!!");
-        }
-    }
-
     public void MoveTowardsShip(float speed)
     {
         rb.AddForce((vapa.vieheSpawnPoint.position - transform.position) * speed);
-    }
-
-    void OnJointBreak(float breakForce)
-    {
-        Debug.Log("A joint has just been broken!, force: " + breakForce);
-        vapa.ShowSpinningWheel(false);
     }
 
 }
