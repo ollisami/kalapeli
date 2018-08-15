@@ -12,21 +12,20 @@ public class OnlineHighScore : MonoBehaviour
     public GameObject tryAgainButton;
 
     private bool postSucc = false;
-
+    private string URL = "https://enter-url-here.com";
 
     public void ShowHighScores()
     {
         loadingText.SetActive(true);
         tryAgainButton.SetActive(false);
-        if(!postSucc)
+        if (!postSucc)
             DoPost();
-        else 
+        else
             DoFetch();
     }
 
     private void DoPost()
     {
-        string URL = "https://quiet-mountain-21856.herokuapp.com/highscores";
         string userName = PlayerPrefs.GetString("username", "noName");
         int userScore = gameController.score;
         string json = "{'name':'" + userName + "', 'score':'" + userScore + "'}";
@@ -42,8 +41,7 @@ public class OnlineHighScore : MonoBehaviour
 
     private void DoFetch()
     {
-        string url = "https://quiet-mountain-21856.herokuapp.com/highscores";
-        WWW www = new WWW(url);
+        WWW www = new WWW(URL);
         StartCoroutine(WaitForRequest(www));
     }
 
@@ -110,7 +108,7 @@ public class OnlineHighScore : MonoBehaviour
             Debug.Log("WWW Ok!: " + www.text);
             JSONNode test = JSONNode.Parse(www.text);
             JSONArray count = test.AsArray;
-            
+
             List<HSObject> userList = new List<HSObject>();
             for (int i = 0; i < count.Count; i++)
             {
