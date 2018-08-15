@@ -6,24 +6,162 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[1].time
+      value: 0.0956209
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[1].value
+      value: 0.024312621
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[1].inSlope
+      value: 0.70181
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[1].outSlope
+      value: 0.70181
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[1].inWeight
+      value: 0.6480379
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[2].value
+      value: 1.0052668
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[2].time
+      value: 0.1600891
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[2].inSlope
+      value: 0.47017813
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[2].outSlope
+      value: 0.47017813
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[2].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: minWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[3].time
+      value: 0.2714206
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[3].value
+      value: 0.059455216
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[3].inSlope
+      value: -0.35801
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[3].outSlope
+      value: -0.35801
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[3].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[3].outWeight
+      value: 0.07410941
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxWeight
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[4].time
+      value: 0.75691676
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[4].value
+      value: 0.011570796
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[4].inSlope
+      value: -0.010590104
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[4].outSlope
+      value: -0.010590104
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[4].inWeight
+      value: 0.06705164
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[4].outWeight
+      value: 0.048284806
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[5].value
+      value: 0.00018310547
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cumulativeProbability.m_Curve.Array.data[5].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 0410e1e04a72f40b78e443159f1b2c69,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: weightIterations
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 0}
+  m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1829455927968108}
-  m_IsPrefabAsset: 1
+  m_IsPrefabParent: 0
 --- !u!1 &1829455927968108
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
+  serializedVersion: 5
   m_Component:
   - component: {fileID: 4222136768378084}
   - component: {fileID: 65224439990016526}
   - component: {fileID: 212673698164337290}
   - component: {fileID: 114795100588446744}
   - component: {fileID: 54088021585453700}
-  m_Layer: 11
+  - component: {fileID: 135577215227006012}
+  m_Layer: 12
   m_Name: Hauki
   m_TagString: Kala
   m_Icon: {fileID: 0}
@@ -33,7 +171,7 @@ GameObject:
 --- !u!4 &4222136768378084
 Transform:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829455927968108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -46,7 +184,7 @@ Transform:
 --- !u!54 &54088021585453700
 Rigidbody:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829455927968108}
   serializedVersion: 2
@@ -61,19 +199,19 @@ Rigidbody:
 --- !u!65 &65224439990016526
 BoxCollider:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829455927968108}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0410e1e04a72f40b78e443159f1b2c69, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114795100588446744
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829455927968108}
   m_Enabled: 1
@@ -82,16 +220,89 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laji: Hauki
-  maxWeight: 30
-  minWeight: 0.5
+  maxWeight: 100
+  minWeight: 1
   weight: 0
   swimSpeed: 0
   maxSpeed: 5
-  smooth: 0.2
+  smooth: 1
+  weightIterations: 2
+  cumulativeProbability:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.0956209
+      value: 0.024312621
+      inSlope: 0.70181
+      outSlope: 0.70181
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.6480379
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.1600891
+      value: 1.0052668
+      inSlope: 0.47017813
+      outSlope: 0.47017813
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.2714206
+      value: 0.059455216
+      inSlope: -0.35801
+      outSlope: -0.35801
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.07410941
+    - serializedVersion: 3
+      time: 0.75691676
+      value: 0.011570796
+      inSlope: -0.010590104
+      outSlope: -0.010590104
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.06705164
+      outWeight: 0.048284806
+    - serializedVersion: 3
+      time: 1
+      value: 0.00018310547
+      inSlope: -0.13607095
+      outSlope: -0.13607095
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.27659506
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!135 &135577215227006012
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1829455927968108}
+  m_Material: {fileID: 13400000, guid: 0410e1e04a72f40b78e443159f1b2c69, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212673698164337290
 SpriteRenderer:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829455927968108}
   m_Enabled: 1
@@ -124,7 +335,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ec843691ae2c05d48942dafd939f0e8f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -133,4 +344,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0

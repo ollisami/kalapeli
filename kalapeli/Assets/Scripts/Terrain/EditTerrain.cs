@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEditor;
-
+#if UNITY_EDITOR
 [CustomEditor(typeof(EditTerrainCube))]
 public class EditTerrain : Editor
 {
@@ -16,4 +16,5 @@ public class EditTerrain : Editor
         }
     }
 }
+#endif
 

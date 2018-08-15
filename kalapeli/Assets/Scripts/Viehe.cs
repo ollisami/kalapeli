@@ -6,7 +6,7 @@ public class Viehe : MonoBehaviour {
 
     public Vapa vapa;
     private Rigidbody rb;
-    private bool hasTouchedWater = false;
+    public bool hasTouchedWater = false;
     public Kala kala;
 
 	// Use this for initialization
@@ -23,11 +23,11 @@ public class Viehe : MonoBehaviour {
                 transform.position = vapa.vieheSpawnPoint.position;
             } else
             {
-                if(hasTouchedWater && Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(vapa.transform.position.x, vapa.transform.position.z)) < 4)
+                if(hasTouchedWater && Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(vapa.vieheSpawnPoint.position.x, vapa.vieheSpawnPoint.position.z)) < 2)
                 {
                     if(kala != null)
                     {
-                        Debug.Log("Hyvä homma hermanni! " + kala.laji + " " + kala.weight);
+                        GameObject.FindObjectOfType<VeneController>().ShowKalaScreen(kala);
                         Destroy(kala.gameObject);
                     }
                     vapa.ShowSpinningWheel(false);
@@ -38,11 +38,13 @@ public class Viehe : MonoBehaviour {
     
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.gameObject.tag.Equals("Vesi"))
-        {
+        {          
+            AudioController.instance.PlaySound("plop");
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            rb.drag = 20;
+            rb.drag = 15;
             hasTouchedWater = true;
             vapa.ShowSpinningWheel(true);
         }

@@ -14,11 +14,20 @@ public class SmoothFollow : MonoBehaviour
     public float heightDamping = 2.0f;
     public float rotationDamping = 3.0f;
 
+    private float startTimer = 0.5F;
+
     // Place the script in the Camera-Control group in the component menu
     [AddComponentMenu("Camera-Control/Smooth Follow")]
 
     void LateUpdate()
     {
+        if(startTimer > 0)
+        {
+            startTimer -= Time.deltaTime;
+            transform.LookAt(target);
+            return;
+        }
+
         // Early out if we don't have a target
         if (!target) return;
 

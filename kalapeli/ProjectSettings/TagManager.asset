@@ -8,6 +8,7 @@ TagManager:
   - Pohja
   - Kala
   - Viehe
+  - VieheFish
   layers:
   - Default
   - TransparentFX
@@ -20,10 +21,10 @@ TagManager:
   - Pohja
   - Viehe
   - IgnorePohja
-  - 
-  - 
-  - 
-  - 
+  - VieheFish
+  - Kala
+  - Rajat
+  - WaterSurface
   - 
   - 
   - 

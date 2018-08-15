@@ -7,12 +7,6 @@ public class EditTerrainCube : MonoBehaviour {
 
     public List<GameObject> neighbour = new List<GameObject>();
     Vector3 pos;
-
-    // Use this for initialization
-    void Start () {
-        UpdateNeighbours();
-        pos = transform.position;
-    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -54,6 +48,7 @@ public class EditTerrainCube : MonoBehaviour {
 
     public void UpdateNeighbours()
     {
+        pos = transform.position;
         neighbour.Clear();
         int layerMask = 1 << 8;
         RaycastHit hit;
