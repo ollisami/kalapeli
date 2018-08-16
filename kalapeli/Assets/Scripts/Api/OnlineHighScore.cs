@@ -12,7 +12,7 @@ public class OnlineHighScore : MonoBehaviour
     public GameObject tryAgainButton;
 
     private bool postSucc = false;
-    private string URL = "https://enter-url-here.com";
+    private string URL = "https://quiet-mountain-21856.herokuapp.com/highscores";
 
     public void ShowHighScores()
     {
