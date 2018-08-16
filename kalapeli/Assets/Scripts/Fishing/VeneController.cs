@@ -98,7 +98,7 @@ public class VeneController : MonoBehaviour {
     {
         DisableAll();
         KalaPanel.SetActive(true);
-        string sizeString = SizeString(kala.weight);
+        string sizeString = kala.laji.Equals("Seaweed") ? "" : SizeString(kala.weight);
         if (sizeString.Length != 0 && !sizeString.Equals("Pikku") )
         {
             AudioController.instance.StopPlaying();

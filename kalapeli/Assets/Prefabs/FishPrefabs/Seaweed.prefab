@@ -12,8 +12,8 @@ Prefab:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: m_Name
-      value: Taimen
+      propertyPath: laji
+      value: Seaweed
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: smooth
@@ -21,35 +21,43 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: maxWeight
-      value: 100
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: minWeight
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: weightIterations
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxScale
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1829455927968108}
-  m_IsPrefabParent: 0
+  m_IsPrefabAsset: 0
 --- !u!1 &1829455927968108
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4222136768378084}
-  - component: {fileID: 65224439990016526}
   - component: {fileID: 212673698164337290}
   - component: {fileID: 114795100588446744}
   - component: {fileID: 54088021585453700}
-  - component: {fileID: 135181058713017898}
+  - component: {fileID: 135565973247572308}
   m_Layer: 12
-  m_Name: Taimen
+  m_Name: Seaweed
   m_TagString: Kala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +66,7 @@ GameObject:
 --- !u!4 &4222136768378084
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829455927968108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -71,7 +79,7 @@ Transform:
 --- !u!54 &54088021585453700
 Rigidbody:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829455927968108}
   serializedVersion: 2
@@ -83,22 +91,10 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &65224439990016526
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1829455927968108}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114795100588446744
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829455927968108}
   m_Enabled: 1
@@ -106,14 +102,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce55aaa2ac9e6b469fdf8c4b2cc5463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laji: Taimen
-  maxWeight: 100
-  minWeight: 1
+  laji: Seaweed
+  maxWeight: 2
+  minWeight: 0.1
   weight: 0
   swimSpeed: 0
   maxSpeed: 5
   smooth: 1
-  weightIterations: 3
+  weightIterations: 1
+  maxSwimSpeed: 250
+  minSwimSpeed: 100
+  maxScale: 5
   cumulativeProbability:
     serializedVersion: 2
     m_Curve:
@@ -174,10 +173,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!135 &135181058713017898
+--- !u!135 &135565973247572308
 SphereCollider:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829455927968108}
   m_Material: {fileID: 13400000, guid: 0410e1e04a72f40b78e443159f1b2c69, type: 2}
@@ -189,7 +188,7 @@ SphereCollider:
 --- !u!212 &212673698164337290
 SpriteRenderer:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829455927968108}
   m_Enabled: 1
@@ -221,7 +220,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 43a0c0d0718332e4682a55735ab384b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a61ab60053d998459b554e531683b24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_FlipX: 0
   m_FlipY: 0
@@ -231,3 +230,4 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+  m_SpriteSortPoint: 0

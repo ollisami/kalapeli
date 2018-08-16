@@ -16,6 +16,9 @@ public class Kala : MonoBehaviour
     public float maxSpeed;
     public float smooth = 1f;
     public int weightIterations = 3;
+    public float maxSwimSpeed = 250.0F;
+    public float minSwimSpeed = 100.0F;
+    public float maxScale = 15.0F;
     private Vector3 targetAngles;
     private float timer = 0;
 
@@ -39,8 +42,8 @@ public class Kala : MonoBehaviour
     public void InitializeKala(float fishScale) {
         maxWeight *= fishScale;
         weight = CalculateWeight();
-        swimSpeed = Random.Range(100.0F, 250.0F);
-        scale = (weight / (maxWeight - minWeight)) * 9 + 2;
+        swimSpeed = Random.Range(minSwimSpeed, maxSwimSpeed);
+        scale = Mathf.Clamp((weight / (maxWeight - minWeight)) * 18.0F + 2.5F, 2.5F, maxScale);
         transform.localScale = new Vector3(scale, scale, scale);
     }
 

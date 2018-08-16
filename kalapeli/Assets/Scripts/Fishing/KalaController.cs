@@ -13,10 +13,7 @@ public class KalaController : MonoBehaviour {
     public int fishCount = 300;
     private List<Vector3> possibleSpawnPoints = new List<Vector3>();
 
-    private void Update()
-    {
-        
-    }
+    private float largest = 0;
 
     void Start()
     {
@@ -56,6 +53,7 @@ public class KalaController : MonoBehaviour {
         }
         SpawnFishes();
         SetTargetKala();
+        Debug.Log("Largest: " + largest);
     }
 
 
@@ -101,5 +99,7 @@ public class KalaController : MonoBehaviour {
         kala.GetComponent<Kala>().InitializeKala(scale);
         kala.transform.parent = this.transform;
         kalat.Add(kala);
+
+        if (kala.GetComponent<Kala>().weight > largest) largest = kala.GetComponent<Kala>().weight;
     }
 }
