@@ -53,11 +53,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: cumulativeProbability.m_Curve.Array.data[3].time
-      value: 0.08885064
+      value: 0.079222344
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: cumulativeProbability.m_Curve.Array.data[3].value
-      value: 0.1735626
+      value: 0.05326231
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: cumulativeProbability.m_Curve.Array.data[2].inSlope
@@ -101,11 +101,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: cumulativeProbability.m_Curve.Array.data[4].time
-      value: 0.2919842
+      value: 0.29680598
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: cumulativeProbability.m_Curve.Array.data[4].value
-      value: 0.06670119
+      value: 0.018849626
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: cumulativeProbability.m_Curve.Array.data[4].inSlope
@@ -284,8 +284,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.08885064
-      value: 0.1735626
+      time: 0.079222344
+      value: 0.05326231
       inSlope: -0.54395443
       outSlope: -0.54395443
       tangentMode: 0
@@ -293,8 +293,8 @@ MonoBehaviour:
       inWeight: 0.9893442
       outWeight: 0.027640706
     - serializedVersion: 3
-      time: 0.2919842
-      value: 0.06670119
+      time: 0.29680598
+      value: 0.018849626
       inSlope: -0.073164746
       outSlope: -0.073164746
       tangentMode: 0
