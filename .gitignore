@@ -23,6 +23,7 @@ ExportedObj/
 *.booproj
 *.svd
 *.pdb
+kalapeli/Assets/Scripts/Api/env.txt
 
 # Unity3D generated meta files
 *.pidb.meta

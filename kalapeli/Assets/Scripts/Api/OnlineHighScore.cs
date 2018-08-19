@@ -12,12 +12,14 @@ public class OnlineHighScore : MonoBehaviour
     public GameObject tryAgainButton;
 
     private bool postSucc = false;
-    private string URL = "";
+    private string URL = "https://this-is-secret.com";
     public TextAsset urlAsset;
 
     public void ShowHighScores()
     {
-        URL = urlAsset.text;
+        if(urlAsset != null)
+            URL = urlAsset.text;
+        
         loadingText.SetActive(true);
         tryAgainButton.SetActive(false);
         if (!postSucc)
