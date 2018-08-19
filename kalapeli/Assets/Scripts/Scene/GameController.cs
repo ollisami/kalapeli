@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour {
     public void ShowHighscores()
     {
         if (showingHighscores) return;
-
+        AudioController.instance.StopPlaying();
         AudioController.instance.PlaySound("ilta");
         highScores.SetActive(true);
         showingHighscores = true;

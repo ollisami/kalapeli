@@ -88,7 +88,8 @@ public class VeneController : MonoBehaviour {
     {
         string sizeString = "";
         if (size < 5) sizeString =  "Pikku";
-        if (size > 10) sizeString =  "Jätti";
+        if (size > 10) sizeString =  "Iso";
+        if (size > 20) sizeString = "Jätti";
         if (size > 50) sizeString = "Hirmu";
         if (size > 100) sizeString = "Uskomaton";
         return sizeString;

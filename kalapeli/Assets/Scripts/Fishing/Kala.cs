@@ -78,6 +78,7 @@ public class Kala : MonoBehaviour
             if (rb.velocity.magnitude < maxSpeed)
             {
                 rb.AddForce(-transform.right * Time.deltaTime * swimSpeed, ForceMode.Acceleration);
+                update = false;
             }
         }
 
@@ -86,7 +87,7 @@ public class Kala : MonoBehaviour
         }
         Color c = rend.color;
         float y = transform.position.y;
-        c.a = Mathf.Clamp01((Mathf.Clamp(y, -10, -1) - (-10)) / (-1 - (-10)) - 0.5F);
+        c.a = Mathf.Clamp01((Mathf.Clamp(y, -10, -1) - (-10)) / (-1 - (-10)) - 0.7F);
         rend.color = c;
     }
 
