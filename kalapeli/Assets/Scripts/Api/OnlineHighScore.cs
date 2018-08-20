@@ -30,7 +30,7 @@ public class OnlineHighScore : MonoBehaviour
 
     private void DoPost()
     {
-        string userName = PlayerPrefs.GetString("username", "noName");
+        string userName = PlayerPrefs.GetString("username", "player");
         int userScore = gameController.score;
         string json = "{'name':'" + userName + "', 'score':'" + userScore + "'}";
         Dictionary<string, string> headers = new Dictionary<string, string>();

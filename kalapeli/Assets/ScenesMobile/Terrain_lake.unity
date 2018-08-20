@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 141684276}
   - component: {fileID: 141684278}
   - component: {fileID: 141684277}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CubeKasi (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -773,7 +773,7 @@ GameObject:
   - component: {fileID: 329398883}
   - component: {fileID: 329398885}
   - component: {fileID: 329398884}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -849,7 +849,7 @@ GameObject:
   - component: {fileID: 337993380}
   - component: {fileID: 337993382}
   - component: {fileID: 337993381}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1004,7 @@ GameObject:
   - component: {fileID: 391549544}
   - component: {fileID: 391549546}
   - component: {fileID: 391549545}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cubepaa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2027,7 +2027,7 @@ GameObject:
   - component: {fileID: 617637282}
   - component: {fileID: 617637281}
   - component: {fileID: 617637280}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Vene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2141,7 +2141,7 @@ GameObject:
   - component: {fileID: 623633147}
   - component: {fileID: 623633149}
   - component: {fileID: 623633148}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2326,7 +2326,7 @@ Transform:
   m_GameObject: {fileID: 655635147}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 120, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 1, z: 10}
+  m_LocalScale: {x: 100, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 563972179}
   m_RootOrder: 1
@@ -2480,7 +2480,7 @@ GameObject:
   - component: {fileID: 677741228}
   - component: {fileID: 677741230}
   - component: {fileID: 677741229}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CubeKasi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2573,7 +2573,7 @@ Transform:
   m_GameObject: {fileID: 684400902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 120, y: 0.501, z: 0}
-  m_LocalScale: {x: 50, y: 1, z: 10}
+  m_LocalScale: {x: 100, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 563972179}
   m_RootOrder: 0
@@ -3151,7 +3151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 908588289}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: VieheSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -5547,7 +5547,7 @@ Terrain:
   m_DetailObjectDistance: 0
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 25
-  m_SplatMapDistance: 40
+  m_SplatMapDistance: 80
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 0
   m_DrawHeightmap: 1
@@ -5574,7 +5574,7 @@ GameObject:
   - component: {fileID: 1573020112}
   - component: {fileID: 1573020114}
   - component: {fileID: 1573020113}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CubeJalka (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5650,7 +5650,7 @@ GameObject:
   - component: {fileID: 1605443904}
   - component: {fileID: 1605443906}
   - component: {fileID: 1605443905}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CubeJalka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5806,7 +5806,7 @@ GameObject:
   - component: {fileID: 1623822886}
   - component: {fileID: 1623822885}
   - component: {fileID: 1623822884}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube_vapa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6070,7 +6070,7 @@ GameObject:
   - component: {fileID: 1672280928}
   - component: {fileID: 1672280930}
   - component: {fileID: 1672280929}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CubeMaha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7029,7 +7029,7 @@ GameObject:
   - component: {fileID: 1852001704}
   - component: {fileID: 1852001706}
   - component: {fileID: 1852001705}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7939,7 +7939,7 @@ GameObject:
   - component: {fileID: 2015707094}
   - component: {fileID: 2015707093}
   - component: {fileID: 2015707092}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: white_fang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8389,7 +8389,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2086098181}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: KalaUkko
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -8454,7 +8454,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -389.9, y: -679.6}
-  m_SizeDelta: {x: 300, y: 117.45}
+  m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2112830398
 MonoBehaviour:
@@ -8537,7 +8537,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3aa64439724c818408f7dbdfc9a45e7c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43a0c0d0718332e4682a55735ab384b2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
