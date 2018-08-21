@@ -484,7 +484,7 @@ MonoBehaviour:
   - {fileID: 188006, guid: c6b7fb383a3534b039692b5485b6e739, type: 2}
   - {fileID: 137650, guid: 826b6a0b570e8460990010fa615b5a2a, type: 2}
   tavoiteScreen: {fileID: 1777649000}
-  fishCount: 400
+  fishCount: 500
 --- !u!4 &217543974
 Transform:
   m_ObjectHideFlags: 0
@@ -2098,7 +2098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 400
-  rotationSpeed: 1000
+  rotationSpeed: 1
   maxSPeed: 5
   joystick: {fileID: 1110233669}
 --- !u!54 &617637282
@@ -2115,7 +2115,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &617637283
 BoxCollider:
@@ -2128,8 +2128,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 1, z: 8.43}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3, y: 1, z: 8.55}
+  m_Center: {x: -0.2, y: 0.2, z: 0}
 --- !u!1 &623633146
 GameObject:
   m_ObjectHideFlags: 0
@@ -2325,7 +2325,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 655635147}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 120, y: 0, z: 0}
+  m_LocalPosition: {x: 120, y: -0.2, z: 0}
   m_LocalScale: {x: 100, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 563972179}
