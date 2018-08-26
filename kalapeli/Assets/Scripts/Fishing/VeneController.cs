@@ -23,7 +23,7 @@ public class VeneController : MonoBehaviour {
     public Sprite[] kalaSprites;
 
     public GameObject throwGuide;
-
+    public GameObject KelaNotes;
     private float cooldown = 1.0F;
 
 
@@ -55,6 +55,7 @@ public class VeneController : MonoBehaviour {
         if(showWheel)
         {
             DisableAll();
+            KelaNotes.SetActive(true);
             spinningWheel.SetActive(showWheel);
         } else
         {
@@ -150,6 +151,7 @@ public class VeneController : MonoBehaviour {
         spinningWheel.SetActive(false);
         KalaPanel.SetActive(false);
         throwGuide.SetActive(false);
+        KelaNotes.SetActive(false);
     }
 
 }
