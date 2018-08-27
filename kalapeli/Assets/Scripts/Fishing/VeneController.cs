@@ -9,7 +9,7 @@ public class VeneController : MonoBehaviour {
     public GameObject joystick;
     public GameObject setAnchorButton;
     public GameObject releaseAnchorButton;
-    public GameObject spinningWheel;
+    public GameObject kela;
 
     public GameObject KalaPanel;
     public Text kalaNameText;
@@ -23,7 +23,6 @@ public class VeneController : MonoBehaviour {
     public Sprite[] kalaSprites;
 
     public GameObject throwGuide;
-    public GameObject KelaNotes;
     private float cooldown = 1.0F;
 
 
@@ -47,7 +46,7 @@ public class VeneController : MonoBehaviour {
 
     public bool CanThrow()
     {
-        return isAnchored && !KalaPanel.activeInHierarchy && !spinningWheel.activeInHierarchy;
+        return isAnchored && !KalaPanel.activeInHierarchy && !kela.activeInHierarchy;
     }
 
     public void SetSpinningWheel(bool showWheel)
@@ -55,11 +54,10 @@ public class VeneController : MonoBehaviour {
         if(showWheel)
         {
             DisableAll();
-            KelaNotes.SetActive(true);
-            spinningWheel.SetActive(showWheel);
+            kela.SetActive(true);
         } else
         {
-            spinningWheel.SetActive(false);
+            kela.SetActive(false);
             releaseAnchorButton.SetActive(true);
         }
     }
@@ -99,6 +97,7 @@ public class VeneController : MonoBehaviour {
     public void ShowKalaScreen(Kala kala)
     {
         DisableAll();
+        kela.GetComponent<Kela>().HideNotes();
         KalaPanel.SetActive(true);
         string sizeString = kala.laji.Equals("Seaweed") ? "" : SizeString(kala.weight);
         if (sizeString.Length != 0 && !sizeString.Equals("Pikku") )
@@ -148,10 +147,9 @@ public class VeneController : MonoBehaviour {
         setAnchorButton.SetActive(false);
         releaseAnchorButton.SetActive(false);
         releaseAnchorButton.SetActive(false);
-        spinningWheel.SetActive(false);
+        kela.SetActive(false);
         KalaPanel.SetActive(false);
         throwGuide.SetActive(false);
-        KelaNotes.SetActive(false);
     }
 
 }

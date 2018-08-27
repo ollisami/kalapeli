@@ -8,6 +8,8 @@ public class Viehe : MonoBehaviour {
     private Rigidbody rb;
     public bool hasTouchedWater = false;
     public Kala kala;
+    public float inWaterDrag = 10;
+    public float fishCaughtDrag = 30;
 
 	// Use this for initialization
 	void Start () {
@@ -44,7 +46,7 @@ public class Viehe : MonoBehaviour {
             AudioController.instance.PlaySound("plop");
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            rb.drag = 15;
+            rb.drag = inWaterDrag;
             hasTouchedWater = true;
             vapa.ShowSpinningWheel(true);
         }
@@ -55,4 +57,9 @@ public class Viehe : MonoBehaviour {
         rb.AddForce((vapa.vieheSpawnPoint.position - transform.position) * speed);
     }
 
+    public void SetKala(Kala k)
+    {
+        this.kala = k;
+        rb.drag = kala == null ? inWaterDrag : fishCaughtDrag;
+    }
 }

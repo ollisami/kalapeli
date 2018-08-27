@@ -156,7 +156,7 @@ public class Kala : MonoBehaviour
                 target = collision.gameObject.transform.parent;
                 catched = true;
                 followSpeed = Random.Range(1, 10);
-                target.gameObject.GetComponent<Viehe>().kala = this;
+                target.gameObject.GetComponent<Viehe>().SetKala(this);
                 FindObjectOfType<Kela>().FishCaught(this);
             }
         }
@@ -179,6 +179,6 @@ public class Kala : MonoBehaviour
         AudioController.instance.StopPlaying();
         AudioController.instance.PlaySound("karkas");
         catched = false;
-        target.gameObject.GetComponent<Viehe>().kala = null;
+        target.gameObject.GetComponent<Viehe>().SetKala(null);
     }
 }

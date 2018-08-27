@@ -7,6 +7,8 @@ public class Note : MonoBehaviour {
 
     private bool isHit = false;
     private RectTransform trans;
+    private Image img;
+    public Kela kela;
 
 	// Use this for initialization
 	void Start () {
@@ -17,17 +19,22 @@ public class Note : MonoBehaviour {
 	void Update () {
 		if(trans.position.y < 0)
         {
-            if(!isHit)
-                FindObjectOfType<Kela>().TargetMissed();
-
-            this.gameObject.SetActive(false);
+            if(kela != null)
+                kela.DestroyNote(this.gameObject, isHit);
         }
 	}
 
     public void NoteHit(Color c)
     {
         if (isHit) return;
-        this.gameObject.GetComponent<Image>().color = c;
+        if (img == null) img = this.gameObject.GetComponent<Image>();
+        img.color = c;
         isHit = true;
+    }
+
+    public void SetSprite (Sprite sprite)
+    {
+        if (img == null) img = this.gameObject.GetComponent<Image>();
+        img.sprite = sprite;
     }
 }

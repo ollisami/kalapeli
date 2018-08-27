@@ -15,6 +15,15 @@ public class OnlineHighScore : MonoBehaviour
     private string URL = "https://this-is-secret.com";
     public TextAsset urlAsset;
 
+    /* TODO: Trigger this when game starts
+    private void Awake()
+    {
+        if (urlAsset != null)
+            URL = urlAsset.text;
+        WakeUpServer();
+    }
+    */
+
     public void ShowHighScores()
     {
         if(urlAsset != null)
@@ -47,6 +56,56 @@ public class OnlineHighScore : MonoBehaviour
     {
         WWW www = new WWW(URL);
         StartCoroutine(WaitForRequest(www));
+    }
+
+    private void WakeUpServer()
+    {
+        WWW www = new WWW(URL);
+        StartCoroutine(WaitForWakeup(www));
+    }
+
+    IEnumerator WaitForWakeup(WWW www)
+    {
+        yield return www;
+        if (www.error == null)
+        {
+            //Print server response
+            Debug.Log("Server alive!" + www.text);
+        }
+        else
+        {
+            //Something goes wrong, print the error response
+            Debug.Log(www.error);
+        }
+
+    }
+
+
+    IEnumerator WaitForRequest(WWW www)
+    {
+        yield return www;
+
+        if (www.error == null)
+        {
+            Debug.Log("WWW Ok!: " + www.text);
+            JSONNode test = JSONNode.Parse(www.text);
+            JSONArray count = test.AsArray;
+
+            List<HSObject> userList = new List<HSObject>();
+            for (int i = 0; i < count.Count; i++)
+            {
+                HSObject hsObj = new HSObject();
+                hsObj.name = test[i]["name"].Value;
+                hsObj.score = int.Parse(test[i]["score"].Value);
+                userList.Add(hsObj);
+            }
+            CreateHighscoreList(userList);
+        }
+        else
+        {
+            Debug.Log("WWW Error: " + www.error);
+            tryAgainButton.SetActive(true);
+        }
     }
 
     IEnumerator WaitForPost(WWW www)
@@ -93,40 +152,12 @@ public class OnlineHighScore : MonoBehaviour
             }
 
             go.GetComponent<HSUIObject>().SetValues(obj.name, obj.score, i + 1);
+
+
             RectTransform trans = go.GetComponent<RectTransform>();
             trans.localPosition = new Vector3(0, 580 + i * (-trans.sizeDelta.y - 10), 0);
         }
         loadingText.SetActive(false);
         tryAgainButton.SetActive(false);
-    }
-
-
-
-
-    IEnumerator WaitForRequest(WWW www)
-    {
-        yield return www;
-
-        if (www.error == null)
-        {
-            Debug.Log("WWW Ok!: " + www.text);
-            JSONNode test = JSONNode.Parse(www.text);
-            JSONArray count = test.AsArray;
-
-            List<HSObject> userList = new List<HSObject>();
-            for (int i = 0; i < count.Count; i++)
-            {
-                HSObject hsObj = new HSObject();
-                hsObj.name = test[i]["name"].Value;
-                hsObj.score = int.Parse(test[i]["score"].Value);
-                userList.Add(hsObj);
-            }
-            CreateHighscoreList(userList);
-        }
-        else
-        {
-            Debug.Log("WWW Error: " + www.error);
-            tryAgainButton.SetActive(true);
-        }
     }
 }

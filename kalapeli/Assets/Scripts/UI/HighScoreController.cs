@@ -9,7 +9,6 @@ public class HighScoreController : MonoBehaviour {
 
     private void OnEnable()
     {
-
         if (local != null) local.ShowHighScores();
         if (online != null) online.ShowHighScores();
     }

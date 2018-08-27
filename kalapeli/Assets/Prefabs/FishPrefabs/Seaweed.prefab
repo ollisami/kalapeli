@@ -39,6 +39,14 @@ Prefab:
       propertyPath: maxScale
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: minSwimSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxSwimSpeed
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 0}
@@ -110,8 +118,8 @@ MonoBehaviour:
   maxSpeed: 5
   smooth: 1
   weightIterations: 1
-  maxSwimSpeed: 250
-  minSwimSpeed: 100
+  maxSwimSpeed: 150
+  minSwimSpeed: 50
   maxScale: 5
   cumulativeProbability:
     serializedVersion: 2
