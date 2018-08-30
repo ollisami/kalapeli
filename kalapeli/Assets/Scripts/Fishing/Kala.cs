@@ -169,7 +169,7 @@ public class Kala : MonoBehaviour
         if (dist > distanceToStop)
         {
             transform.LookAt(target);
-            rb.AddRelativeForce(Vector3.forward * speed, ForceMode.Force);
+            rb.AddRelativeForce(Vector3.forward * speed * 5, ForceMode.Force);
         }
     }
 

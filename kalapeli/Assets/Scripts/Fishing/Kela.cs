@@ -23,6 +23,11 @@ public class Kela : MonoBehaviour
     public int misses;
     public int allowedMisses;
 
+    public GameObject noteHitObject;
+    private Image noteHitObjectImage;
+    public Sprite defaultHitSprite;
+    public Sprite pressNowHitSprite;
+
     private int index = 0;
     private byte curr = 0;
     private byte prev = 0;
@@ -40,11 +45,35 @@ public class Kela : MonoBehaviour
 
         maskTrans = notesMaskObj.GetComponent<RectTransform>();
         maskTransStartPosition = maskTrans.localPosition;
+
+        noteHitObjectImage = noteHitObject.GetComponent<Image>();
+        noteHitObject.SetActive(false);
     }
 
     void FixedUpdate()
     {
         if (viehe == null) viehe = FindObjectOfType<Viehe>();
+
+        bool didHit = false;
+        if (hasFish)
+        {
+            results.Clear();
+            m_PointerEventData = new PointerEventData(m_EventSystem)
+            {
+                position = noteHitObject.transform.position
+            };
+            m_Raycaster.Raycast(m_PointerEventData, results);
+            foreach (RaycastResult result in results)
+            {
+                if (result.gameObject.tag.Equals("KelausPiece"))
+                {
+                    didHit = true;
+                    if (Input.GetMouseButton(0))
+                        result.gameObject.GetComponent<Note>().NoteHit(noteHitColor);
+                }
+            }
+            noteHitObjectImage.sprite = didHit ? pressNowHitSprite : defaultHitSprite;
+        }
 
         if (Input.GetMouseButton(0))
         {
@@ -53,29 +82,20 @@ public class Kela : MonoBehaviour
 
             if(hasFish)
             {
-                results.Clear();
-                m_PointerEventData = new PointerEventData(m_EventSystem)
-                {
-                    position = this.transform.position
-                };
-                m_Raycaster.Raycast(m_PointerEventData, results);
-                bool didHit = false;
-                foreach (RaycastResult result in results)
-                {
-                    if(result.gameObject.tag.Equals("KelausPiece"))
-                    {
-                        didHit = true;
-                        result.gameObject.GetComponent<Note>().NoteHit(noteHitColor);
-                    }    
-                }
-                if(!didHit)
+                if (!didHit)
                 {
                     misses++;
                 }
+                noteHitObjectImage.color = didHit ? Color.green : Color.red;               
             }
         }
-        
-        if(hasFish)
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            noteHitObjectImage.color = Color.white;
+        }
+
+            if (hasFish)
         {
             SetNotes();
             if (misses > allowedMisses)
@@ -85,7 +105,7 @@ public class Kela : MonoBehaviour
                 return;
             }
             Vector3 pos = maskTrans.localPosition;
-            pos.y -= Time.deltaTime * noteSpeed;
+            pos.y -= Time.deltaTime * (noteSpeed + targetFish.weight);
             maskTrans.localPosition = pos;
         }   
     }
@@ -101,7 +121,7 @@ public class Kela : MonoBehaviour
         curr = 0;
         prev = 0;
         next = 0;
-
+        noteHitObject.SetActive(true);
         hasFish = true;
     }
 
@@ -112,6 +132,7 @@ public class Kela : MonoBehaviour
             Destroy(go);
         }
         notes.Clear();
+        noteHitObject.SetActive(false);
         hasFish = false;
     }
 
