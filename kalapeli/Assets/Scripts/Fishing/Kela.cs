@@ -84,7 +84,7 @@ public class Kela : MonoBehaviour
             {
                 if (!didHit)
                 {
-                    misses++;
+                    misses += 3;
                 }
                 noteHitObjectImage.color = didHit ? Color.green : Color.red;               
             }
@@ -95,7 +95,7 @@ public class Kela : MonoBehaviour
             noteHitObjectImage.color = Color.white;
         }
 
-            if (hasFish)
+        if (hasFish)
         {
             SetNotes();
             if (misses > allowedMisses)
@@ -175,7 +175,7 @@ public class Kela : MonoBehaviour
     public void DestroyNote(GameObject go, bool isHit)
     {
         if (!hasFish) return;
-        if (!isHit) misses += 10;
+        if (!isHit) misses += 20;
 
         if (notes.Contains(go))
         {

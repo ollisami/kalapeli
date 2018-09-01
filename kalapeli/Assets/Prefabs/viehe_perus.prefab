@@ -134,7 +134,7 @@ MonoBehaviour:
   vapa: {fileID: 0}
   hasTouchedWater: 0
   kala: {fileID: 0}
-  inWaterDrag: 15
+  inWaterDrag: 12
   fishCaughtDrag: 30
 --- !u!135 &135040507296873016
 SphereCollider:

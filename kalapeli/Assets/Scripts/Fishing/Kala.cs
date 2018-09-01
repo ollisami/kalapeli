@@ -66,7 +66,7 @@ public class Kala : MonoBehaviour
                 catched = false;
                 return;
             }
-            FollowTargetWithRotation(target, 0.1F, followSpeed);
+            FollowTargetWithRotation(target, 0.01F, followSpeed);
         }
         else
         {
@@ -169,7 +169,7 @@ public class Kala : MonoBehaviour
         if (dist > distanceToStop)
         {
             transform.LookAt(target);
-            rb.AddRelativeForce(Vector3.forward * speed * 5, ForceMode.Force);
+            rb.AddRelativeForce(Vector3.forward * Mathf.Min(followSpeed * 2, 250) * Time.deltaTime, ForceMode.Force);
         }
     }
 

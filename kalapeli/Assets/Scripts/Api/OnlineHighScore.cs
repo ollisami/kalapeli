@@ -152,10 +152,6 @@ public class OnlineHighScore : MonoBehaviour
             }
 
             go.GetComponent<HSUIObject>().SetValues(obj.name, obj.score, i + 1);
-
-
-            RectTransform trans = go.GetComponent<RectTransform>();
-            trans.localPosition = new Vector3(0, 580 + i * (-trans.sizeDelta.y - 10), 0);
         }
         loadingText.SetActive(false);
         tryAgainButton.SetActive(false);

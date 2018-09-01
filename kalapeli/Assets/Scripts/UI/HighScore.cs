@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -42,7 +45,7 @@ public class HighScore : MonoBehaviour {
         hSObjects.Reverse();
         hSObjects.RemoveAt(hSObjects.Count - 1);
         bool userShown = false;
-
+        RectTransform parent = this.gameObject.GetComponent<RectTransform>();
         for (int i = 0; i < hSObjects.Count; i++)
         {
             HSObject obj = hSObjects[i];
@@ -57,9 +60,6 @@ public class HighScore : MonoBehaviour {
             }
 
             go.GetComponent<HSUIObject>().SetValues(obj.name, obj.score, i + 1);
-            RectTransform trans = go.GetComponent<RectTransform>();
-            
-            trans.localPosition = new Vector3(0, 580 + i * (-trans.sizeDelta.y - 10), 0);
 
             PlayerPrefs.SetString("hsNames_" + i, obj.name);
             PlayerPrefs.SetInt("hsScores_" + i, obj.score);
