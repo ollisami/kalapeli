@@ -4973,8 +4973,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kalaTuli:
   - {fileID: 8300000, guid: 234656d6dcd34ca47af12664a5804244, type: 3}
-  - {fileID: 8300000, guid: 5273b634d48c6cd4787c480c2b212d08, type: 3}
+  - {fileID: 8300000, guid: f727d173c26e7ee47aa9760b47e2625c, type: 3}
   - {fileID: 8300000, guid: 748b92ddaa653b14d849ba73d71993eb, type: 3}
+  - {fileID: 8300000, guid: 26d790120f49bcb4e8cacd58e1153be6, type: 3}
+  - {fileID: 8300000, guid: 9dbcc6c325938264aa5e66d19e432880, type: 3}
   moottori:
   - {fileID: 8300000, guid: 54f6254a7a2db0546a8f0eb1e6aff7ac, type: 3}
   plop:
@@ -4984,6 +4986,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 071d7d48932a8d241ba00232a91233d8, type: 3}
   - {fileID: 8300000, guid: efa6b1a6359ad6b44ade1f57d1544df2, type: 3}
   - {fileID: 8300000, guid: 7db7691e86b2026429a4b18a12773075, type: 3}
+  - {fileID: 8300000, guid: 6ef725d3c4cca7045909d1512126754f, type: 3}
   kelaRykasy:
   - {fileID: 8300000, guid: 8f353666bc89281449276091ebf13413, type: 3}
   - {fileID: 8300000, guid: bed2dd06d0bcedf41b2ff88a261e87de, type: 3}
@@ -4991,19 +4994,24 @@ MonoBehaviour:
   kelaus:
   - {fileID: 8300000, guid: 685b8b97d1e573d49baafb517c2fde72, type: 3}
   karkas:
-  - {fileID: 8300000, guid: 2339b664ebbeec645ab040bdca9c2139, type: 3}
+  - {fileID: 8300000, guid: 885e5c2b1398a19448bcfaa011c41181, type: 3}
   - {fileID: 8300000, guid: dcf4a1454aa052c40955b5c829c29d73, type: 3}
   - {fileID: 8300000, guid: 32abb16cfcd670742bf22746fae3c032, type: 3}
-  - {fileID: 8300000, guid: 3e20871c84074cd43b611ba672dda293, type: 3}
+  - {fileID: 8300000, guid: b0b447604b23c59488ef81e61d8a7733, type: 3}
   - {fileID: 8300000, guid: a8d29cde267f50e40a664d432954ac6d, type: 3}
   - {fileID: 8300000, guid: 9369626e38bcfbc4f852eaec8d423df2, type: 3}
   ilta:
   - {fileID: 8300000, guid: 287902be8ae86aa459e2f51853fba2dc, type: 3}
   - {fileID: 8300000, guid: 14b90ecce3b7c3b4db1aaa10e113deb3, type: 3}
+  - {fileID: 8300000, guid: fd7098134b60ca542a5f91c37f0340e3, type: 3}
   kalaNostettu:
   - {fileID: 8300000, guid: 0c2174bbb22b7434993d75d2b62114e1, type: 3}
+  - {fileID: 8300000, guid: 2c71ce62338361546990b0556aab9dd4, type: 3}
+  - {fileID: 8300000, guid: f58b9c2812f4b074197b166c47601c13, type: 3}
   isoKala:
   - {fileID: 8300000, guid: 3d40c17f5ae845c47aedc6d77ab5f203, type: 3}
+  - {fileID: 8300000, guid: fdbbbc00478ef1d459be67af5637e473, type: 3}
+  - {fileID: 8300000, guid: d64a31b3a7c09a945ae0cefc29f518ee, type: 3}
 --- !u!1 &1407948664
 GameObject:
   m_ObjectHideFlags: 0

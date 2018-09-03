@@ -56,6 +56,7 @@ public class Kala : MonoBehaviour
         }
         return size / weightIterations;
     }
+
     private void FixedUpdate()
     {
         if (timer > 0) timer -= Time.deltaTime;
@@ -149,7 +150,8 @@ public class Kala : MonoBehaviour
             {
                 Debug.Log("kala kiinni");
                 Handheld.Vibrate();
-                if(weight > 50)
+                AudioController.instance.StopPlaying();
+                if (weight > 50)
                     AudioController.instance.PlaySound("isoKala");
                 else
                     AudioController.instance.PlaySound("kalaTuli");
@@ -169,13 +171,13 @@ public class Kala : MonoBehaviour
         if (dist > distanceToStop)
         {
             transform.LookAt(target);
-            rb.AddRelativeForce(Vector3.forward * Mathf.Min(followSpeed * 2, 250) * Time.deltaTime, ForceMode.Force);
+            rb.AddRelativeForce(Vector3.forward * Mathf.Max(followSpeed, 100), ForceMode.Force);
         }
     }
 
     public void Released()
     {
-        Debug.Log("Karkas saatana");
+        Debug.Log("Karkas");
         AudioController.instance.StopPlaying();
         AudioController.instance.PlaySound("karkas");
         catched = false;

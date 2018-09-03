@@ -45,7 +45,7 @@ public class HighScore : MonoBehaviour {
         hSObjects.Reverse();
         hSObjects.RemoveAt(hSObjects.Count - 1);
         bool userShown = false;
-        RectTransform parent = this.gameObject.GetComponent<RectTransform>();
+
         for (int i = 0; i < hSObjects.Count; i++)
         {
             HSObject obj = hSObjects[i];
