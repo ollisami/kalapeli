@@ -1,5 +1,8 @@
 # kalapeli
 
+## Available now!
+<a target="_blank" rel="noopener noreferrer" href='https://play.google.com/store/apps/details?id=com.HaaviinVaanProductions.kalapeli&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' height="125" width="323" src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+
 Loppuiko kalastuskausi kesken? 
 Onko alueesi joet rauhoitettu?
 Eikö jäät vielä kanna pilkkijää?
