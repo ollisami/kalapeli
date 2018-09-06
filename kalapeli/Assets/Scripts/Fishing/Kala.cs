@@ -29,6 +29,7 @@ public class Kala : MonoBehaviour
     private SpriteRenderer rend;
     public AnimationCurve cumulativeProbability;
     private bool update;
+    private float caughtTimer = 0.0F;
 
     // Use this for initialization
     void Start()
@@ -59,6 +60,7 @@ public class Kala : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (caughtTimer > 0) caughtTimer -= Time.deltaTime;
         if (timer > 0) timer -= Time.deltaTime;
         if (catched)
         {
@@ -146,7 +148,7 @@ public class Kala : MonoBehaviour
 
         if (!catched && collision.gameObject.tag.Equals("VieheFish"))
         {
-            if (collision.gameObject.transform.parent.gameObject.GetComponent<Viehe>().kala == null)
+            if (caughtTimer <= 0 && collision.gameObject.transform.parent.gameObject.GetComponent<Viehe>().kala == null)
             {
                 Debug.Log("kala kiinni");
                 Handheld.Vibrate();
@@ -171,7 +173,7 @@ public class Kala : MonoBehaviour
         if (dist > distanceToStop)
         {
             transform.LookAt(target);
-            rb.AddRelativeForce(Vector3.forward * Mathf.Max(followSpeed, 100), ForceMode.Force);
+            rb.AddRelativeForce(Vector3.forward * 500.0F * Time.deltaTime, ForceMode.Force);
         }
     }
 
@@ -182,5 +184,6 @@ public class Kala : MonoBehaviour
         AudioController.instance.PlaySound("karkas");
         catched = false;
         target.gameObject.GetComponent<Viehe>().SetKala(null);
+        caughtTimer = 1.0F;
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SimpleJSON;
+using UnityEngine.UI;
 
 public class OnlineHighScore : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class OnlineHighScore : MonoBehaviour
     private string URL = "https://this-is-secret.com";
     public TextAsset urlAsset;
 
+    public ScrollRect scrollRect;
+    public bool scroll = false;
+
     /* TODO: Trigger this when game starts
     private void Awake()
     {
@@ -23,6 +27,16 @@ public class OnlineHighScore : MonoBehaviour
         WakeUpServer();
     }
     */
+
+    public void Update()
+    {
+        if (scroll && scrollRect != null)
+        {
+            scrollRect.verticalNormalizedPosition += Time.deltaTime;
+            if (scrollRect.verticalNormalizedPosition >= 1) scroll = false;
+            Debug.Log(scrollRect.verticalNormalizedPosition);
+        }
+    }
 
     public void ShowHighScores()
     {
@@ -155,5 +169,10 @@ public class OnlineHighScore : MonoBehaviour
         }
         loadingText.SetActive(false);
         tryAgainButton.SetActive(false);
+
+        if (scrollRect != null)
+        {
+            scroll = true;
+        }
     }
 }

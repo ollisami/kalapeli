@@ -4,6 +4,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HighScore : MonoBehaviour {
 
@@ -12,6 +13,9 @@ public class HighScore : MonoBehaviour {
     public GameObject hsObjectPrefabPlayer;
     public GameController gameController;
 
+    public ScrollRect scrollRect;
+    public bool scroll = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,7 +23,12 @@ public class HighScore : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(scroll && scrollRect != null)
+        {
+            scrollRect.verticalNormalizedPosition += Time.deltaTime;
+            if (scrollRect.verticalNormalizedPosition >= 1) scroll = false;
+            Debug.Log(scrollRect.verticalNormalizedPosition);
+        }
 	}
 
     public void ShowHighScores()
@@ -64,7 +73,10 @@ public class HighScore : MonoBehaviour {
             PlayerPrefs.SetString("hsNames_" + i, obj.name);
             PlayerPrefs.SetInt("hsScores_" + i, obj.score);
         }
-
+        if (scrollRect != null)
+        {
+            scroll = true;
+        }
 
     }
 }
