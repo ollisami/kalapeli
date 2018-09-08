@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: TerrainLowpoly
-  m_Shader: {fileID: 4800000, guid: 1440c08003dc4a74f8754a0bdf550f3d, type: 3}
+  m_Shader: {fileID: 4800000, guid: 258b54afd67e6c845a623d51d10876d7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
