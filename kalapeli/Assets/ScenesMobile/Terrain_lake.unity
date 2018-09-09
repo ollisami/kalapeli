@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.4433962, g: 0.18195978, b: 0.33986044, a: 1}
-  m_FogMode: 1
-  m_FogDensity: 0.013
+  m_Fog: 1
+  m_FogColor: {r: 1, g: 0.96862745, b: 0.827451, a: 1}
+  m_FogMode: 2
+  m_FogDensity: 0.0015
   m_LinearFogStart: 20
   m_LinearFogEnd: 110
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -5219,7 +5219,7 @@ MonoBehaviour:
   scoreText: {fileID: 1350940170}
   score: 0
   scenelight: {fileID: 1986024462}
-  endColor: {r: 0, g: 0, b: 0, a: 1}
+  endColor: {r: 0.29411766, g: 0, b: 0, a: 1}
   sessionLenght: 180
   highScores: {fileID: 1770573615}
   gameHasEnded: 0
