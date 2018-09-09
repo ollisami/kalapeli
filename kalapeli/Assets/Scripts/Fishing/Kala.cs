@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -90,7 +93,7 @@ public class Kala : MonoBehaviour
         }
         Color c = rend.color;
         float y = transform.position.y;
-        c.a = Mathf.Clamp01((Mathf.Clamp(y, -10, -1) - (-10)) / (-1 - (-10)) - 0.7F) + 0.05F;
+        c.a = Mathf.Clamp01((Mathf.Clamp(y, -10, -1) - (-10)) / (-1 - (-10)) - 0.7F) + 0.15F;
         rend.color = c;
     }
 
