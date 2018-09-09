@@ -5813,7 +5813,7 @@ MonoBehaviour:
   loadingText: {fileID: 1617707672}
   gameController: {fileID: 1515247512}
   tryAgainButton: {fileID: 1773862595}
-  urlAsset: {fileID: 4900000, guid: ca83a3933d8ed4289aa6986e6a78652d, type: 3}
+  urlAsset: {fileID: 4900000, guid: 2d29922def391aa439cc3147d0161910, type: 3}
   scrollRect: {fileID: 83962039}
   scroll: 0
 --- !u!114 &1658867997
