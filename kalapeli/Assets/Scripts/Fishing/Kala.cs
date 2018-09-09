@@ -34,6 +34,10 @@ public class Kala : MonoBehaviour
     private bool update;
     private float caughtTimer = 0.0F;
 
+    private float idleTimer = 0.0F;
+    private Vector3 idlePos;
+    private List<Vector3> idleSpawnPoints;
+
     // Use this for initialization
     void Start()
     {
@@ -41,6 +45,22 @@ public class Kala : MonoBehaviour
         rend = GetComponent<SpriteRenderer>();
         targetAngles = transform.eulerAngles;
         update = Random.value > 0.5F;
+        idleSpawnPoints = createIdleSpawnPoints();
+        idlePos = transform.position;
+    }
+
+    private List<Vector3> createIdleSpawnPoints()
+    {
+        List<Vector3> spawnPoints = new List<Vector3>();
+        spawnPoints.Add(new Vector3(61, -10, 75));
+        spawnPoints.Add(new Vector3(60, -9, 129));
+        spawnPoints.Add(new Vector3(97, -9, 129));
+        spawnPoints.Add(new Vector3(177, -8, 11));
+        spawnPoints.Add(new Vector3(237, -9, -127));
+        spawnPoints.Add(new Vector3(305, -9, -135));
+        spawnPoints.Add(new Vector3(415, -9, -170));
+        spawnPoints.Add(new Vector3(172, -9, 49));
+        return spawnPoints;
     }
 
     public void InitializeKala(float fishScale) {
@@ -93,8 +113,25 @@ public class Kala : MonoBehaviour
         }
         Color c = rend.color;
         float y = transform.position.y;
-        c.a = Mathf.Clamp01((Mathf.Clamp(y, -10, -1) - (-10)) / (-1 - (-10)) - 0.7F) + 0.15F;
+        c.a = Mathf.Clamp01((Mathf.Clamp(y, -10, -1) - (-10)) / (-1 - (-10)) - 0.7F) + 0.10F;
         rend.color = c;
+
+        if(!catched)
+        {
+            if(idleTimer < 5.0)
+            {
+                idleTimer += Time.deltaTime;
+            } else
+            {
+                if(Vector3.Distance(idlePos, transform.position) < 0.5F)
+                {
+                    Debug.Log("IDLE");
+                    transform.position = idleSpawnPoints[Random.Range(0, idleSpawnPoints.Count - 1)];
+                } 
+                idleTimer = 0.0F;
+                idlePos = transform.position;               
+            }
+        }
     }
 
     private void HandleBottomCollision() {
